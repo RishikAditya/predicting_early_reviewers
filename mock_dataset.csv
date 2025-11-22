@@ -1,0 +1,11 @@
+reviewerId,pastReviewsCount,submissionTimestamp,completionTimestamp,teamFamiliarity,contextualKnowledge
+r1,10,1698700000,1698703600,true,true
+r2,3,1698700500,1698710500,false,false
+r3,7,1698701000,1698701600,true,false
+r4,0,1698702000,1698732000,false,true
+r5,5,1698703000,1698703300,false,false
+r6,2,1698704000,1698704100,false,true
+r7,8,1698705000,1698708000,true,true
+r8,4,1698706000,1698716000,true,false
+r9,6,1698707000,1698707900,false,true
+r10,12,1698708000,1698710800,true,true

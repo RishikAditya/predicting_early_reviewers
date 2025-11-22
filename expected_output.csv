@@ -1,0 +1,11 @@
+reviewerId,avgReviewTimeSeconds,pastReviewsCount,experienceCategory,teamFamiliarity,contextualKnowledge,earlyReviewer,explanation
+r1,3600,10,Experienced,true,true,YES,"Faster than global average and experienced."
+r2,10000,3,Low Experience,false,false,NO,"No early-review rule matched."
+r3,600,7,Experienced,true,false,YES,"Significantly faster and familiar with code/context."
+r4,30000,0,Low Experience,false,true,NO,"Insufficient data."
+r5,300,5,Experienced,false,false,YES,"Faster than global average and experienced."
+r6,100,2,Low Experience,false,true,YES,"Significantly faster and familiar with code/context."
+r7,3000,8,Experienced,true,true,YES,"Faster than global average and experienced."
+r8,10000,4,Low Experience,true,false,NO,"No early-review rule matched."
+r9,900,6,Experienced,false,true,YES,"Significantly faster and familiar with code/context."
+r10,2800,12,Experienced,true,true,YES,"Faster than global average and experienced."
