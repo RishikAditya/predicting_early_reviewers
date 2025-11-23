@@ -2,71 +2,66 @@
 
 ### Introduction
 
-In opensource projects Like Linux developers contribute on code for development of the software / Operating systems / project hence it helps the community these developers code is sent to the reviewers who has good knowledge of code and the can read, check for errors and make decision to release / include in the next version of the software
+Open-source projects like Linux rely on developers who contribute code to improve the software or operating system. Their code is sent to reviewers who have strong knowledge of the codebase and can read, check for errors, and decide whether to release or include changes in the next version of the software. Reviewers are responsible for checking code and dispatching it as quickly as possible, but they are often slow. This creates a bottleneck that delays releases and leads to the following problems:
 
-These reviewers job is to check the code and dispatch the code as soon as possible but these reviewers are often slow hence we this creates a bottleneck problem delaying the release of the version that is set to release creates these following problems
-
-1. Reduced Project velocity 
-2. Delayed Releases - that causes computational market losses
-3. Rising costs 
-4. Contributors Burnout - Developers who contribute to these open source project looses momentum, interest in building while waiting for the feedback on the submitted code
+1. Reduced project velocity
+2. Delayed releases that cause opportunity and market losses
+3. Rising costs
+4. Contributor burnout — developers lose momentum and interest while waiting for feedback on submitted code
 
 ### Project Goal
 
-Our project goal is to build a computational model that can anticipate quick reviewers  and Route PRs to predicted early reviewers which Dramatically reduces cycle time, accelerating feature delivery
+Build a computational model that can anticipate fast reviewers and route PRs to predicted early reviewers, dramatically reducing cycle time and accelerating feature delivery.
 
 ### Data Source and Input Parameters
 
-Historical Review Event Data - just like Version Control software like (GitHub) that includes versions of code comments of reviewers, discussions and decisions
+Historical review event data from version control platforms (e.g., GitHub), including code versions, reviewer comments, discussions, and decisions.
 
-this data is given in the format of Mock CSV format Which includes q`
+This data is provided in a mock CSV format and includes:
 
-1. Key Timestamps ( Measured in Seconds)
+1. Key timestamps (measured in seconds)
 2. Reviewer attributes
     1. Unique Reviewer ID
-    2. Past Reviews Count (Experience)
-    3. Time under which they completed the review
+    2. Past reviews count (experience)
+    3. Time taken to complete each review
 
-Implementation Focus on Java Collections or Custom classes that manages large datasets containing the PR submission time and review completion time (measured in seconds for precision)
+Implementation will focus on Java collections or custom classes that manage large datasets containing PR submission time and review completion time (measured in seconds for precision).
 
 ### Characterization of Reviewer
 
-1. Timeliness Feature
-    1. Calculate Time to Review 
-    2. Establishes Response Speed Baseline
-2. Experience Feature
-    1. Past Reviews Count - IF (Reviewer Experience ≥ 5 Past Reviews)... THEN Predict EARLY Reviewer
-    2. Team Familiarity - An understanding of team workflows and standards
-    3. Contextual Knowledge - sufficient knowledge of the codebase
-3. Feature Synthesis - Identifies the behavioral patterns and differences between the fast responders from the slower reviewers
+1. Timeliness feature
+    1. Calculate time to review
+    2. Establish a baseline for response speed
+2. Experience feature
+    1. Past reviews count — IF reviewer experience ≥ 5 past reviews, THEN predict EARLY reviewer
+    2. Team familiarity — understanding of team workflows and standards
+    3. Contextual knowledge — sufficient knowledge of the codebase
+3. Feature synthesis — identify behavioral patterns distinguishing fast responders from slower reviewers
 
-### Rule - Based Prediction Model
+### Rule-Based Prediction Model
 
-Simplified Avoids Complex ML Mathematics 
+Simplified approach that avoids complex ML mathematics.
 
-Relays on core logic (conditional statements)
+Relies on core logic and conditional statements with clear thresholds.
 
-Thresholds
+### Key Outcomes and Feature Importance
 
-### Key outcomes and Feature Importance
+Measure model effectiveness and identify which characteristics drive accurate early-reviewer prediction.
 
-to know the model effectiveness and identifying which characteristics drive accurate to predict early reviewer
+Performance metrics:
 
-Performance Metrics
-
-Predictions compared against ground truth labels
-
-calculating overall accuracy through correct predictions / total Events
+- Compare predictions against ground-truth labels
+- Calculate overall accuracy as correct predictions / total events
 
 ### Limitations
 
-1. Simplified Thresholds - a reviewer with 6 past reviews is treated the same as one with 100 as they both met required threshold
-2. Design Trade- off - Prioritizing simplicity over maximal predictive accuracy that comes from ML algorithms
+1. Simplified thresholds — a reviewer with 6 past reviews is treated the same as one with 100 because both meet the threshold
+2. Design trade-off — prioritizing simplicity over maximal predictive accuracy achievable with ML algorithms
 
 ### Conclusion
 
-Achieved Foundation - On base level we are able to demonstrate measurable accuracy in identifying fast responders through experience and historical patterns
+Established a foundation — at a base level, we can demonstrate measurable accuracy in identifying fast responders using experience and historical patterns.
 
 ### Future Work
 
-Implementation of Advanced Machine Learning Algorithms
+- Implement advanced machine learning algorithms
